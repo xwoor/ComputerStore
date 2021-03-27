@@ -73,54 +73,59 @@
                 </div>
                 </div> 
             </div>
-                
-            <div class="col-12 col-md-6 col-lg-6">
-                <h1>Tamaño de datos</h1>
+            
+			
+				<div class="col-12 col-md-6 col-lg-6">
+					<h1>Tamaño de datos</h1>
 
-				<!-- Calculadora -->
-				<div class= "container" >
-					<div class="mb-3">
-						<label for="formGroupExampleInput" class="form-label">Tamaño a Calcular</label>
-						 <input type="text" class="form-control" value="" id="Valor1" aria-describedby="basic-addon3" required placeholder="Ingrese el valor">
-					</div>
-					
-					<div class="btn-group">
-					  <button type="button" class="btn btn-secondary">Seleccione</button>
-					  <button type="button" class="btn btn-secondary dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false">
-						<span class="visually-hidden">Toggle Dropdown</span>
-					  </button>
-					  <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-							<li><a class="dropdown-item" href="#">Byte</a></li>
-							<li><a class="dropdown-item" href="#">Kilobyte</a></li>
-							<li><a class="dropdown-item" href="#">Megabyte</a></li>
-							<li><a class="dropdown-item" href="#">Gigabyte</a></li>
-							<li><a class="dropdown-item" href="#">Terabyte</a></li>
-					  </ul>
-					</div>
+				<script>
+					function calcular(){
+    
+						var a = document.f1.a.value;
+						var b = document.f1.b1.value;
+						var x = document.f1.b2.value;
+						var r = document.f1.c.value;
+						r=(parseFloat(a)*parseFloat(x))/parseFloat(b);
+					   document.f1.c.value=r;
+					}
+				</script> 
 
-					<div class="mb-3">
-					  <label for="formGroupExampleInput2" class="form-label">Tamaño Calculado</label>
-						<input type="text" class="form-control" value="" id="Valor2" aria-describedby="basic-addon3" required placeholder="El valor equivale a">
+
+					<div class="container" class="mb-3" >
+						<form name="f1" action="conversor.html" method="POST">
+
+							<div class="row mt-4">
+								  <input type="text" class="form-control" id="a" name="a" placeholder="Digite aquí el valor a convertir" >
+  
+																										
+										<select name="b1" class="form-control" >
+										  <Option disabled>Seleccione una opcion</opcion>
+										  <option value="1">Byte</option>
+										  <option value="1000">Kilobyte</option>	
+										  <option value="1000000">Megabyte</option>
+										  <option value="1000000000" >Gigabyte</option>
+										  <option value="1000000000000">Terabyte</option>
+										</select>
+									
+									<div class= "row mt-4">	
+									  <input type="Button" name="" value="convertir" onclick="calcular()" class="btn btn-primary"  style="background-color: #000000">
+									</div>
+									<div class= "row mt-4">	
+										<select name="b2" class="form-control">
+										  <Option  disabled>Seleccione una opcion</opcion>	 
+										  <option value="1">Byte</option>
+										  <option value="1000">Kilobyte</option>	
+										  <option value="1000000">Megabyte</option>
+										  <option value="1000000000" >Gigabyte</option>
+										  <option value="1000000000000">Terabyte</option>
+										</select>
+									</div>
+									<fieldset disabled>
+									<div class= "row mt-4" >
+										<input type="text" class="form-control" id="c" name="c" placeholder="Resultado">
+							</div>	
+  						</form>
 					</div>
-						<div class="btn-group">
-						  <button type="button" class="btn btn-secondary">Seleccione</button>
-						  <button type="button" class="btn btn-secondary dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false">
-							<span class="visually-hidden">Toggle Dropdown</span>
-						  </button>
-						  <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-								<li><a class="dropdown-item" href="#">Byte</a></li>
-								<li><a class="dropdown-item" href="#">Kilobyte</a></li>
-								<li><a class="dropdown-item" href="#">Megabyte</a></li>
-								<li><a class="dropdown-item" href="#">Gigabyte</a></li>
-								<li><a class="dropdown-item" href="#">Terabyte</a></li>
-						  </ul>
-						</div>
-					</div>
-					<div class="row mt-4">
-						<button type="button" class="btn btn-primary" id="calcular">Calcular</button>
-					</div>
-				</div>
-            </div>
         </div>
     </div>
     <!-- SECION -->
