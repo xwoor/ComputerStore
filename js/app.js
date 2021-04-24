@@ -1,6 +1,6 @@
 //variables
-document.getElementById("calcular").addEventListener("click", function() {
-
+document.getElementById("calcular").addEventListener("click", function() 
+{
     var compra =  document.getElementById("compra")  ;
     var utilidad = document.getElementById("utilidad") ;
     var iva = document.getElementById("iva") ;
