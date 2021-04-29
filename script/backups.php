@@ -5,6 +5,8 @@ $username = "root";
 $password = "";
 $dbname = "dbunad7";
 
-$mysqldump='"C:\AppServ\MySQL\bin\mysqldump.exe"';
-$backup_file='"C:\AppServ\www\ComputerStore\backups\"'.$dbname. "-" .date("Y-m-d-H-i-s")."sql";
-system("$mysqldump --no-default -u $ ")
+$mysqldump='"C:\xampp\MySQL\bin\mysqldump.exe"';
+$backup_file='"C:\xampp\htdcos\ComputerStore\backups\"'.$dbname. "-" .date("Y-m-d-H-i-s")."sql";
+system("$mysqldump --no-default -u $username -p$password $dbname > $backups ");
+
+?>
