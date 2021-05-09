@@ -31,6 +31,8 @@
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                 <a class="dropdown-item" href="script/crearDB.php">Crear Base de datos</a>
                 <a class="dropdown-item" href="script/crearTabla.php">Crear Tabla</a>
+                <a class="dropdown-item" href="script/backups.php">Crear Backup</a>
+                <a class="dropdown-item" href="script/ReporPDF.php">Reportes PDF</a>
             </li>
 
 
